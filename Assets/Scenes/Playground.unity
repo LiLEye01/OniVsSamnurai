@@ -548,6 +548,75 @@ LightProbeGroup:
   - {x: 7.1518564, y: 2.7763042, z: -11.2319765}
   - {x: 8.993203, y: 2.3566551, z: -8.796325}
   m_Dering: 1
+--- !u!1001 &1001234315
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: cf820e3702004da4cb0188372db7bc37,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cf820e3702004da4cb0188372db7bc37,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 12.889785
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cf820e3702004da4cb0188372db7bc37,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cf820e3702004da4cb0188372db7bc37,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.5664577
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cf820e3702004da4cb0188372db7bc37,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cf820e3702004da4cb0188372db7bc37,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cf820e3702004da4cb0188372db7bc37,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cf820e3702004da4cb0188372db7bc37,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cf820e3702004da4cb0188372db7bc37,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cf820e3702004da4cb0188372db7bc37,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cf820e3702004da4cb0188372db7bc37,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cf820e3702004da4cb0188372db7bc37,
+        type: 3}
+      propertyPath: m_Name
+      value: ARPG_Samurai_Humanoid
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cf820e3702004da4cb0188372db7bc37, type: 3}
 --- !u!1 &1028513131
 GameObject:
   m_ObjectHideFlags: 0
