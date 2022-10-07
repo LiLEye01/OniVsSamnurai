@@ -1703,7 +1703,7 @@ GameObject:
   - component: {fileID: 5060148101805516061}
   - component: {fileID: 5060148101805516062}
   m_Layer: 0
-  m_Name: Samurai
+  m_Name: SamuraiPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
