@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviour
 
     private bool groundedPlayer;
 
+    private Animator anim;
+
     [SerializeField]
     private float playerSpeed = 2.0f;
     [SerializeField]
@@ -29,6 +31,7 @@ public class PlayerController : MonoBehaviour
     {
         controller = GetComponent<CharacterController>();
         cameraMain = Camera.main.transform;
+        anim = GetComponent<Animator>();
     }
 
     private void OnEnable()
