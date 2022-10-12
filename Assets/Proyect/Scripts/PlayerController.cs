@@ -25,8 +25,11 @@ public class PlayerController : MonoBehaviour
     private float gravityValue = -9.81f;
     [SerializeField]
     private float rotationSpeed = 4f;
+    
     private Transform cameraMain;
 
+    [SerializeField]
+    private bool walk = false;
     private void Start()
     {
         controller = GetComponent<CharacterController>();
