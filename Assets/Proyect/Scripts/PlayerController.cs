@@ -62,6 +62,15 @@ public class PlayerController : MonoBehaviour
         move = cameraMain.transform.forward * move.z + cameraMain.transform.right * move.x;
         move.y = 0f;
         controller.Move(move * Time.deltaTime * playerSpeed);
+
+        if (movement.x != 0 || movement.y != 0)
+        {
+            anim.SetBool("Walk", true);
+        }
+        else
+        {
+            anim.SetBool("Walk", false);
+        }
            
         // Changes the height position of the player..
         if (dashControl.action.triggered && groundedPlayer)
