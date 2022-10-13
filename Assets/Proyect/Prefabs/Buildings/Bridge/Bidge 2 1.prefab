@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &902052334093751573
+--- !u!1 &4447696084655222117
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,42 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5076302804331629278}
-  - component: {fileID: 8553477428236806930}
-  - component: {fileID: 442281559834331964}
+  - component: {fileID: 3465469591688383757}
+  m_Layer: 0
+  m_Name: Bidge 2 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3465469591688383757
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4447696084655222117}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2939.1355, y: 2.741028, z: -654.5951}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7637234738357409190}
+  - {fileID: 932102957188255028}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5051178286495159039
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 932102957188255028}
+  - component: {fileID: 4335231777714859256}
+  - component: {fileID: 5530020731832503510}
   m_Layer: 0
   m_Name: EXTRAS_KITBASH3D_EDOJAPAN_BRIDGES_bridge_02_roof_bridge_02
   m_TagString: Untagged
@@ -18,36 +51,36 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5076302804331629278
+--- !u!4 &932102957188255028
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 902052334093751573}
+  m_GameObject: {fileID: 5051178286495159039}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8829881056158845671}
+  m_Father: {fileID: 3465469591688383757}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &8553477428236806930
+--- !u!33 &4335231777714859256
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 902052334093751573}
+  m_GameObject: {fileID: 5051178286495159039}
   m_Mesh: {fileID: -6114894093610580515, guid: d0b3461289de8c9449ad9b30ac16572b, type: 3}
---- !u!23 &442281559834331964
+--- !u!23 &5530020731832503510
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 902052334093751573}
+  m_GameObject: {fileID: 5051178286495159039}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -61,7 +94,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -5706878034808494030, guid: d0b3461289de8c9449ad9b30ac16572b, type: 3}
+  - {fileID: 2100000, guid: 418ea20e28c31fe4895eeb6c0d7bb40a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -83,7 +116,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &4490337844646224909
+--- !u!1 &8416447362732139495
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -91,9 +124,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2549372422174052940}
-  - component: {fileID: 1962692044714991500}
-  - component: {fileID: 5097003573206973596}
+  - component: {fileID: 7637234738357409190}
+  - component: {fileID: 5882046592889215078}
+  - component: {fileID: 874236592576297846}
   m_Layer: 0
   m_Name: EXTRAS_KITBASH3D_EDOJAPAN_BRIDGES_bridge_02_bridge_02_wood
   m_TagString: Untagged
@@ -101,36 +134,36 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2549372422174052940
+--- !u!4 &7637234738357409190
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4490337844646224909}
+  m_GameObject: {fileID: 8416447362732139495}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8829881056158845671}
+  m_Father: {fileID: 3465469591688383757}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &1962692044714991500
+--- !u!33 &5882046592889215078
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4490337844646224909}
+  m_GameObject: {fileID: 8416447362732139495}
   m_Mesh: {fileID: 8469638046867389476, guid: d0b3461289de8c9449ad9b30ac16572b, type: 3}
---- !u!23 &5097003573206973596
+--- !u!23 &874236592576297846
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4490337844646224909}
+  m_GameObject: {fileID: 8416447362732139495}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -144,7 +177,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -4324177805094203905, guid: d0b3461289de8c9449ad9b30ac16572b, type: 3}
+  - {fileID: 2100000, guid: 9b55fea41eed1fd41b311a712c92152b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -166,36 +199,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &8585193721250228879
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8829881056158845671}
-  m_Layer: 0
-  m_Name: Bidge 2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8829881056158845671
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8585193721250228879}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20.505577, y: -52.448917, z: -1.6289873}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2549372422174052940}
-  - {fileID: 5076302804331629278}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
