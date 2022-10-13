@@ -197,7 +197,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 4
-  m_FollowOffset: {x: 0, y: 2.36, z: -2.1}
+  m_FollowOffset: {x: 0, y: 2.36, z: -3.39}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -434,7 +434,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1124804427}
-  m_LocalRotation: {x: 0.14089024, y: -0.68584925, z: 0.13793886, w: 0.70052385}
+  m_LocalRotation: {x: 0.08173378, y: -0.69499123, z: 0.080021605, w: 0.7098615}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -521,8 +521,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1188647098}
-  m_LocalRotation: {x: 0.1420429, y: 0.00017264817, z: -0.00002477465, w: 0.98986053}
-  m_LocalPosition: {x: 19.14418, y: -47.73448, z: 3.477718}
+  m_LocalRotation: {x: 0.08264323, y: 0.00017379048, z: -0.0000144119085, w: 0.9965792}
+  m_LocalPosition: {x: 19.14373, y: -47.73448, z: 2.187718}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -763,7 +763,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1320760516}
-  m_LocalRotation: {x: 0.101496965, y: -0.69248956, z: 0.0993708, w: 0.7073062}
+  m_LocalRotation: {x: 0.059052844, y: -0.69718987, z: 0.057815798, w: 0.7121071}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -846,7 +846,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 4
-  m_FollowOffset: {x: 0, y: 2.36, z: -2.1}
+  m_FollowOffset: {x: 0, y: 2.36, z: -3.39}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -1027,12 +1027,12 @@ MonoBehaviour:
   m_BindingMode: 4
   m_SplineCurvature: 0.2
   m_Orbits:
-  - m_Height: 2.74
-    m_Radius: 4.12
   - m_Height: 2.36
-    m_Radius: 2.1
-  - m_Height: 1
-    m_Radius: 1.3
+    m_Radius: 3.39
+  - m_Height: 2.36
+    m_Radius: 3.39
+  - m_Height: 2.36
+    m_Radius: 3.39
   m_LegacyHeadingBias: 3.4028235e+38
   m_Rigs:
   - {fileID: 2091381416}
@@ -1046,7 +1046,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1833279764}
   m_LocalRotation: {x: -0, y: 0.69970757, z: -0, w: 0.71442944}
-  m_LocalPosition: {x: 19.14418, y: -47.73448, z: 3.477718}
+  m_LocalPosition: {x: 19.14373, y: -47.73448, z: 2.187718}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1160,7 +1160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 4
-  m_FollowOffset: {x: 0, y: 2.36, z: -2.1}
+  m_FollowOffset: {x: 0, y: 2.36, z: -3.39}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -1282,7 +1282,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2091381415}
-  m_LocalRotation: {x: 0.16942365, y: -0.6796337, z: 0.16587457, w: 0.69417536}
+  m_LocalRotation: {x: 0.110698596, y: -0.69113684, z: 0.10837967, w: 0.70592463}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1298,6 +1298,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1818711687517682474, guid: 8f6938feb30a76142a66dd61db537af2,
+        type: 3}
+      propertyPath: hit
+      value: 
+      objectReference: {fileID: 326318691500768101, guid: b407e02e2d824264a8fa5404ef0f047a,
+        type: 3}
+    - target: {fileID: 1818711687517682474, guid: 8f6938feb30a76142a66dd61db537af2,
+        type: 3}
+      propertyPath: walk
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3292838880071797450, guid: 8f6938feb30a76142a66dd61db537af2,
         type: 3}
       propertyPath: m_Controller
@@ -1306,12 +1317,7 @@ PrefabInstance:
     - target: {fileID: 3292838880071797450, guid: 8f6938feb30a76142a66dd61db537af2,
         type: 3}
       propertyPath: m_WarningMessage
-      value: "\nBinding warning: Some generic clip(s) animate transforms that are
-        already bound by a Humanoid avatar. These transforms can only be changed
-        by Humanoid clips.\n\tTransform 'pelvis'\n\tTransform 'head'\n\tTransform
-        'hand_l'\n\tTransform 'spine_02'\n\tTransform 'upperarm_r'\n\tTransform 'thigh_l'\n\tTransform
-        'calf_l'\n\tTransform 'foot_l'\n\tTransform 'upperarm_l'\n\tTransform 'foot_r'\n\tand
-        more ...\n\tFrom animation clip 'root|+ Crouch Walk R'"
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4609769845603666096, guid: 8f6938feb30a76142a66dd61db537af2,
         type: 3}
