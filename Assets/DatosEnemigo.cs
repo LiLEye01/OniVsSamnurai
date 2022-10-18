@@ -14,4 +14,9 @@ public class DatosEnemigo : MonoBehaviour
             Debug.Log("Die Oni");
         }
     }
+
+    public void enemyDamage(int d)
+    {
+        VidaEnemigo -= d;
+    }
 }
