@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
     private InputActionReference movementControl;
     [SerializeField]
     private InputActionReference dashControl;
+    [SerializeField]
+    private InputActionReference hit;
 
     private CharacterController controller;
 
@@ -25,25 +27,34 @@ public class PlayerController : MonoBehaviour
     private float gravityValue = -9.81f;
     [SerializeField]
     private float rotationSpeed = 4f;
+    [SerializeField]
+    private float damage = 25f;
+    
     private Transform cameraMain;
+
+    [SerializeField]
+    private bool walk = false;
 
     private void Start()
     {
         controller = GetComponent<CharacterController>();
         cameraMain = Camera.main.transform;
         anim = GetComponent<Animator>();
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void OnEnable()
     {
         movementControl.action.Enable();
         dashControl.action.Enable();
+        hit.action.Enable();
     }
 
     private void OnDisable()
     {
         movementControl.action.Disable();
         dashControl.action.Disable();
+        hit.action.Disable();
     }
 
     void Update()
@@ -59,6 +70,24 @@ public class PlayerController : MonoBehaviour
         move = cameraMain.transform.forward * move.z + cameraMain.transform.right * move.x;
         move.y = 0f;
         controller.Move(move * Time.deltaTime * playerSpeed);
+
+        if (movement.x != 0 || movement.y != 0)
+        {
+            anim.SetBool("Walk", true);
+        }
+        else
+        {
+            anim.SetBool("Walk", false);
+        }
+
+        if(hit)
+        {
+            anim.SetBool("Attack", true);
+        }
+        else
+        {
+            anim.SetBool("Attack", false);
+        }
            
         // Changes the height position of the player..
         if (dashControl.action.triggered && groundedPlayer)
