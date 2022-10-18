@@ -4,7 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - 'OniSamurai '
+  - Enemy
+  - OniSamurai
   layers:
   - Default
   - TransparentFX

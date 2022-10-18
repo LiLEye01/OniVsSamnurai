@@ -9,9 +9,11 @@ public class BolaDamage : MonoBehaviour
 
    private void OnTriggerEnter(Collider other) 
     {
-    if (other.tag == "OniSamurai") 
+    if (other.gameObject.CompareTag("OniSamurai")) 
         {
-            Enemigo.GetComponent<DatosEnemigo>().VidaEnemigo -= damage; 
+            Debug.Log("Damage");
+            //Enemigo.GetComponent<DatosEnemigo>().VidaEnemigo -= damage;
+            Enemigo.GetComponent<DatosEnemigo>().enemyDamage(damage);
         }
     }
 }
