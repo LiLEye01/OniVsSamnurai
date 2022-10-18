@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
 
     private Vector3 playerVelocity;
 
+    [SerializeField]
     private bool groundedPlayer;
 
     private Animator anim;
@@ -82,11 +83,11 @@ public class PlayerController : MonoBehaviour
 
         if(hit)
         {
-            anim.SetBool("Attack", true);
+            //anim.SetBool("Attack", true);
         }
         else
         {
-            anim.SetBool("Attack", false);
+            //anim.SetBool("Attack", false);
         }
            
         // Changes the height position of the player..
