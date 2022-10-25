@@ -81,14 +81,11 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("Walk", false);
         }
 
-        if(hit)
+        if(hit.action.triggered)
         {
-            //anim.SetBool("Attack", true);
+            anim.SetTrigger("Attack");
         }
-        else
-        {
-            //anim.SetBool("Attack", false);
-        }
+        
            
         // Changes the height position of the player..
         if (dashControl.action.triggered && groundedPlayer)
