@@ -30,11 +30,13 @@ public class PlayerController : MonoBehaviour
     private float rotationSpeed = 4f;
     [SerializeField]
     private float damage = 25f;
-    
+
     private Transform cameraMain;
 
     [SerializeField]
     private bool walk = false;
+
+    public float dashForce;
 
     private void Start()
     {
@@ -70,7 +72,7 @@ public class PlayerController : MonoBehaviour
         Vector3 move = new Vector3( movement.x,0,movement.y );
         move = cameraMain.transform.forward * move.z + cameraMain.transform.right * move.x;
         move.y = 0f;
-        controller.Move(move * Time.deltaTime * playerSpeed);
+        controller.Move(move * Time.deltaTime * playerSpeed * dashForce);
 
         if (movement.x != 0 || movement.y != 0)
         {
