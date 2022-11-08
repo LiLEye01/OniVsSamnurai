@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -11,6 +12,8 @@ public class PlayerController : MonoBehaviour
     private InputActionReference dashControl;
     [SerializeField]
     private InputActionReference hit;
+    [SerializeField]
+    private InputActionReference change;
 
     private CharacterController controller;
 
@@ -54,6 +57,7 @@ public class PlayerController : MonoBehaviour
         movementControl.action.Enable();
         dashControl.action.Enable();
         hit.action.Enable();
+        change.action.Enable();
     }
 
     private void OnDisable()
@@ -61,6 +65,7 @@ public class PlayerController : MonoBehaviour
         movementControl.action.Disable();
         dashControl.action.Disable();
         hit.action.Disable();
+        change.action.Disable();
     }
 
     void Update()
@@ -90,6 +95,15 @@ public class PlayerController : MonoBehaviour
         {
             anim.SetTrigger("Attack");
         }
+
+       /* if (change.action.triggered)
+        {
+            anim.SetTrigger("Ready");
+        }
+        else
+        {
+            anim.SetTrigger("endFight");
+        }*/
         
            
         // Changes the height position of the player..
