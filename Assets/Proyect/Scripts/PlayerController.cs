@@ -44,6 +44,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     float dashTime, dashSpeed;
 
+    bool isReady;
+
     private void Start()
     {
         controller = GetComponent<CharacterController>();
@@ -90,20 +92,34 @@ public class PlayerController : MonoBehaviour
         {
             anim.SetBool("Walk", false);
         }
-
+        
         if(hit.action.triggered)
         {
-            anim.SetTrigger("Attack");
+            if (isReady)
+            {
+                anim.SetTrigger("Attack");
+            }
         }
 
-       /* if (change.action.triggered)
+        else if (change.action.triggered)
         {
-            anim.SetTrigger("Ready");
+            if (!isReady)
+            {
+                anim.SetTrigger("Ready");
+                isReady = true;
+            }
+            else
+            {
+                anim.SetTrigger("endFight");
+                isReady=false;
+            }
         }
+       /*
         else
         {
             anim.SetTrigger("endFight");
-        }*/
+        }
+       */
         
            
         // Changes the height position of the player..
