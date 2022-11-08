@@ -107,6 +107,7 @@ public class PlayerController : MonoBehaviour
             {
                 anim.SetTrigger("Ready");
                 isReady = true;
+                
             }
             else
             {
@@ -114,13 +115,6 @@ public class PlayerController : MonoBehaviour
                 isReady=false;
             }
         }
-       /*
-        else
-        {
-            anim.SetTrigger("endFight");
-        }
-       */
-        
            
         // Changes the height position of the player..
         /*if (dashControl.action.triggered && groundedPlayer)
