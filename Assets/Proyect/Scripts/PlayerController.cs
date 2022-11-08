@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -36,7 +37,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private bool walk = false;
 
-    public float dashForce;
+    Vector3 move;
+    [SerializeField]
+    float dashTime, dashSpeed;
 
     private void Start()
     {
@@ -69,10 +72,10 @@ public class PlayerController : MonoBehaviour
         }
 
         Vector2 movement = movementControl.action.ReadValue<Vector2>();
-        Vector3 move = new Vector3( movement.x,0,movement.y );
+        move = new Vector3( movement.x,0,movement.y );
         move = cameraMain.transform.forward * move.z + cameraMain.transform.right * move.x;
         move.y = 0f;
-        controller.Move(move * Time.deltaTime * playerSpeed * dashForce);
+        controller.Move(move * Time.deltaTime * playerSpeed);
 
         if (movement.x != 0 || movement.y != 0)
         {
@@ -90,9 +93,14 @@ public class PlayerController : MonoBehaviour
         
            
         // Changes the height position of the player..
-        if (dashControl.action.triggered && groundedPlayer)
+        /*if (dashControl.action.triggered && groundedPlayer)
         {
             playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
+        }*/
+        //Dash con corutina
+        if (dashControl.action.triggered)
+        {
+            StartCoroutine(charDash());
         }
 
         playerVelocity.y += gravityValue * Time.deltaTime;
@@ -103,6 +111,15 @@ public class PlayerController : MonoBehaviour
             float targetAngle = Mathf.Atan2(movement.x, movement.y) * Mathf.Rad2Deg + cameraMain.eulerAngles.y;
             Quaternion rotation = Quaternion.Euler(0f, targetAngle, 0f);
             transform.rotation = Quaternion.Lerp(transform.rotation, rotation, rotationSpeed * Time.deltaTime);
+        }
+    }
+    IEnumerator charDash()
+    {
+        float startTime = Time.time;
+        while (Time.time < startTime + dashTime)
+        {
+            controller.Move(move * dashSpeed * Time.deltaTime);
+            yield return null;
         }
     }
 }
