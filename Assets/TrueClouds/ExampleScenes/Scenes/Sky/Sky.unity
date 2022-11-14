@@ -38,7 +38,11 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 70059069}
+<<<<<<< Updated upstream
   m_IndirectSpecularColor: {r: 0.33605632, g: 0.3731296, b: 0.39443862, a: 1}
+=======
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+>>>>>>> Stashed changes
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &4
 LightmapSettings:
@@ -98,7 +102,11 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_LightingSettings: {fileID: 4890085278179872738, guid: ad95f6f27920dc143be39e9ddde99e50,
+=======
+  m_LightingSettings: {fileID: 4890085278179872738, guid: cc9218150be06544ea054440b1e35c2d,
+>>>>>>> Stashed changes
     type: 2}
 --- !u!196 &5
 NavMeshSettings:
@@ -134,7 +142,10 @@ GameObject:
   m_Component:
   - component: {fileID: 70059070}
   - component: {fileID: 70059069}
+<<<<<<< Updated upstream
   - component: {fileID: 70059071}
+=======
+>>>>>>> Stashed changes
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -219,6 +230,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< Updated upstream
 --- !u!114 &70059071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -300,6 +312,8 @@ Material:
     - _LateCutThreshohld: 0.2
     m_Colors: []
   m_BuildTextureStacks: []
+=======
+>>>>>>> Stashed changes
 --- !u!1 &861585959
 GameObject:
   m_ObjectHideFlags: 0
@@ -407,10 +421,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CloudsMask:
+<<<<<<< Updated upstream
     m_Bits: 256
   LightMask:
     m_Bits: 0
   WorldBlockingMask:
+=======
+    serializedVersion: 2
+    m_Bits: 256
+  LightMask:
+    serializedVersion: 2
+    m_Bits: 0
+  WorldBlockingMask:
+    serializedVersion: 2
+>>>>>>> Stashed changes
     m_Bits: 567
   ResolutionDivider: 2
   WorldDepthResolutionDivider: 1
@@ -435,6 +459,7 @@ MonoBehaviour:
   Light: {fileID: 70059070}
   UseRamp: 0
   Ramp: {fileID: 0}
+<<<<<<< Updated upstream
   LightColor:
     r: 1
     g: 0.97302234
@@ -445,6 +470,10 @@ MonoBehaviour:
     g: 0.7474048
     b: 0.7941176
     a: 1
+=======
+  LightColor: {r: 1, g: 0.97302234, b: 0.8602941, a: 1}
+  ShadowColor: {r: 0.6773356, g: 0.7474048, b: 0.7941176, a: 1}
+>>>>>>> Stashed changes
   LightEnd: 1
   HaloPower: 2.71
   HaloDistance: 0.46
@@ -456,6 +485,7 @@ MonoBehaviour:
   depthShader: {fileID: 4800000, guid: 009f6c8cf8d3c144792d6321909e830c, type: 3}
   cloudShader: {fileID: 4800000, guid: ddd68a53b8f487941ac09b4480974963, type: 3}
   clearColorShader: {fileID: 4800000, guid: e8f3ce2cbe4971147b1b7f04b791e52a, type: 3}
+<<<<<<< Updated upstream
   _worldDepth: {fileID: 0}
   _cloudDepth: {fileID: 0}
   _fromRT: {fileID: 0}
@@ -572,6 +602,8 @@ Material:
     - _NoiseParams: {r: 2, g: 1, b: 3, a: 1}
     - _ShadowColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
+=======
+>>>>>>> Stashed changes
 --- !u!1 &1972463672
 GameObject:
   m_ObjectHideFlags: 0
