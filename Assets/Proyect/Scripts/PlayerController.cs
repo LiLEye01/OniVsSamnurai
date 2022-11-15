@@ -34,6 +34,8 @@ public class PlayerController : MonoBehaviour
     private float rotationSpeed = 4f;
     [SerializeField]
     private float damage = 25f;
+    [SerializeField]
+    private GameObject katana;
 
     private Transform cameraMain;
 
@@ -107,20 +109,17 @@ public class PlayerController : MonoBehaviour
             {
                 anim.SetTrigger("Ready");
                 isReady = true;
+                katana.SetActive(true);
                 
             }
             else
             {
                 anim.SetTrigger("endFight");
                 isReady=false;
+                katana.SetActive(false);
             }
         }
            
-        // Changes the height position of the player..
-        /*if (dashControl.action.triggered && groundedPlayer)
-        {
-            playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
-        }*/
         //Dash con corutina
         if (dashControl.action.triggered)
         {
