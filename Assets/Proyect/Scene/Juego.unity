@@ -471,7 +471,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 177267755}
-  m_LocalRotation: {x: 0.10449037, y: -0.69551307, z: 0.103329755, w: 0.7033252}
+  m_LocalRotation: {x: 0.10449036, y: -0.695513, z: 0.10332975, w: 0.7033253}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -616,10 +616,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1045779900}
     m_Modifications:
+    - target: {fileID: 390275452260235586, guid: f11b2275f3de83e45b77ed7e9916f5df,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1823171984104390451, guid: f11b2275f3de83e45b77ed7e9916f5df,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3117080073391420799, guid: f11b2275f3de83e45b77ed7e9916f5df,
         type: 3}
       propertyPath: m_Name
       value: Bridge 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3117080073391420799, guid: f11b2275f3de83e45b77ed7e9916f5df,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4528096126854696965, guid: f11b2275f3de83e45b77ed7e9916f5df,
         type: 3}
@@ -690,6 +705,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5252439119231722562, guid: f11b2275f3de83e45b77ed7e9916f5df,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8499317645403560958, guid: f11b2275f3de83e45b77ed7e9916f5df,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f11b2275f3de83e45b77ed7e9916f5df, type: 3}
@@ -1178,6 +1203,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1045779900}
     m_Modifications:
+    - target: {fileID: 359923574481665479, guid: 7919bcafc82579f44b592d69dd41c586,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1203579441985259664, guid: 7919bcafc82579f44b592d69dd41c586,
         type: 3}
       propertyPath: m_RootOrder
@@ -1248,6 +1278,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2699289781629397517, guid: 7919bcafc82579f44b592d69dd41c586,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4336617983957012727, guid: 7919bcafc82579f44b592d69dd41c586,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6020689243516480776, guid: 7919bcafc82579f44b592d69dd41c586,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8646273762512320824, guid: 7919bcafc82579f44b592d69dd41c586,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1257,6 +1302,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: M pagoda 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9151107649756106315, guid: 7919bcafc82579f44b592d69dd41c586,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7919bcafc82579f44b592d69dd41c586, type: 3}
@@ -1495,6 +1545,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1045779900}
     m_Modifications:
+    - target: {fileID: 4311410051960668706, guid: 4f4605ff25529ed409db84fe4f423311,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5197803225685168632, guid: 4f4605ff25529ed409db84fe4f423311,
         type: 3}
       propertyPath: m_RootOrder
@@ -1570,6 +1625,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tori 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7539364777354186961, guid: 4f4605ff25529ed409db84fe4f423311,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 9097427943219790899, guid: 4f4605ff25529ed409db84fe4f423311,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f4605ff25529ed409db84fe4f423311, type: 3}
 --- !u!1001 &874580990
@@ -1579,6 +1644,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1045779900}
     m_Modifications:
+    - target: {fileID: 1051606056730589186, guid: d0759d54e1c4c554caa944a174577efe,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1379200884532840592, guid: d0759d54e1c4c554caa944a174577efe,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2779616234125454709, guid: d0759d54e1c4c554caa944a174577efe,
         type: 3}
       propertyPath: m_RootOrder
@@ -1649,6 +1724,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3395538028425707123, guid: d0759d54e1c4c554caa944a174577efe,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3532710060176831532, guid: d0759d54e1c4c554caa944a174577efe,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1658,6 +1738,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: S pagoda 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5853297090080914658, guid: d0759d54e1c4c554caa944a174577efe,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8251150391307587252, guid: d0759d54e1c4c554caa944a174577efe,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0759d54e1c4c554caa944a174577efe, type: 3}
@@ -1672,6 +1762,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: W pagoda 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 269688682828889211, guid: 37e6442160b37a648ac2a61b18c51b26,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 789933230473705131, guid: 37e6442160b37a648ac2a61b18c51b26,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1455988885434534876, guid: 37e6442160b37a648ac2a61b18c51b26,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4131068757211559043, guid: 37e6442160b37a648ac2a61b18c51b26,
         type: 3}
@@ -1748,6 +1853,16 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f9231a5872521c54999d0eea7560a56b, type: 2}
+    - target: {fileID: 4895543169072393209, guid: 37e6442160b37a648ac2a61b18c51b26,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149178567815708986, guid: 37e6442160b37a648ac2a61b18c51b26,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37e6442160b37a648ac2a61b18c51b26, type: 3}
 --- !u!1 &897663997 stripped
@@ -1888,10 +2003,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1045779900}
     m_Modifications:
+    - target: {fileID: 875526571392830691, guid: e6d89bd6746f8c248bab22b399387650,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2079807596971085196, guid: e6d89bd6746f8c248bab22b399387650,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3951114989833585352, guid: e6d89bd6746f8c248bab22b399387650,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5638201639986597832, guid: e6d89bd6746f8c248bab22b399387650,
         type: 3}
       propertyPath: m_Name
       value: M pagoda 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5638201639986597832, guid: e6d89bd6746f8c248bab22b399387650,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8321174495308037300, guid: e6d89bd6746f8c248bab22b399387650,
         type: 3}
@@ -1963,6 +2098,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8503420405006362732, guid: e6d89bd6746f8c248bab22b399387650,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6d89bd6746f8c248bab22b399387650, type: 3}
 --- !u!4 &993441224 stripped
@@ -1999,7 +2139,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1045779900
 Transform:
@@ -2137,10 +2277,40 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1045779900}
     m_Modifications:
+    - target: {fileID: 3180085058197950919, guid: 10b83022b3c11574a82d259585234f42,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3364188462506182437, guid: 10b83022b3c11574a82d259585234f42,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5776272754115983735, guid: 10b83022b3c11574a82d259585234f42,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6768757116764991458, guid: 10b83022b3c11574a82d259585234f42,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7197894308696910963, guid: 10b83022b3c11574a82d259585234f42,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7973490786996883693, guid: 10b83022b3c11574a82d259585234f42,
         type: 3}
       propertyPath: m_Name
       value: M pagoda 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7973490786996883693, guid: 10b83022b3c11574a82d259585234f42,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8468556041792937608, guid: 10b83022b3c11574a82d259585234f42,
         type: 3}
@@ -2566,10 +2736,35 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f9231a5872521c54999d0eea7560a56b, type: 2}
+    - target: {fileID: 2157349012275242609, guid: 8f54d8016937acc4ab14c391df46a9ef,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2301320348101953849, guid: 8f54d8016937acc4ab14c391df46a9ef,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2780966237612180014, guid: 8f54d8016937acc4ab14c391df46a9ef,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5839798722402748958, guid: 8f54d8016937acc4ab14c391df46a9ef,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6656207140227684291, guid: 8f54d8016937acc4ab14c391df46a9ef,
         type: 3}
       propertyPath: m_Name
       value: 'S pagoda 2 '
+      objectReference: {fileID: 0}
+    - target: {fileID: 6656207140227684291, guid: 8f54d8016937acc4ab14c391df46a9ef,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f54d8016937acc4ab14c391df46a9ef, type: 3}
@@ -3724,6 +3919,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Bidge 2 '
       objectReference: {fileID: 0}
+    - target: {fileID: 1723400236917357470, guid: a63b55ff027f18c4681d5bc5b0c393be,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1832227556693716381, guid: a63b55ff027f18c4681d5bc5b0c393be,
         type: 3}
       propertyPath: m_RootOrder
@@ -3794,6 +3994,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1889990519749248015, guid: a63b55ff027f18c4681d5bc5b0c393be,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4279855377033253152, guid: a63b55ff027f18c4681d5bc5b0c393be,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a63b55ff027f18c4681d5bc5b0c393be, type: 3}
 --- !u!1001 &1703692281
@@ -3808,6 +4018,26 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 3829529b36a6f674ba97a827b7593f8b, type: 2}
+    - target: {fileID: 1148207686478972460, guid: 6b2167e8d73b9504e9d5a05681e62d3e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1542348560464184338, guid: 6b2167e8d73b9504e9d5a05681e62d3e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4168361697115805975, guid: 6b2167e8d73b9504e9d5a05681e62d3e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4313595513141990142, guid: 6b2167e8d73b9504e9d5a05681e62d3e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5706816115318783776, guid: 6b2167e8d73b9504e9d5a05681e62d3e,
         type: 3}
       propertyPath: m_RootOrder
@@ -3882,6 +4112,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: M pagoda 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7392587483719386607, guid: 6b2167e8d73b9504e9d5a05681e62d3e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391418123414017941, guid: 6b2167e8d73b9504e9d5a05681e62d3e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b2167e8d73b9504e9d5a05681e62d3e, type: 3}
@@ -4708,10 +4948,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2055196785080318693, guid: 6494ba368682b034da29d839f104b0b2,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2658559629821247992, guid: 6494ba368682b034da29d839f104b0b2,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3808602980050793353, guid: 6494ba368682b034da29d839f104b0b2,
         type: 3}
       propertyPath: m_Name
       value: 'B pagoda 1 '
+      objectReference: {fileID: 0}
+    - target: {fileID: 3808602980050793353, guid: 6494ba368682b034da29d839f104b0b2,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4884165483316369467, guid: 6494ba368682b034da29d839f104b0b2,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6494ba368682b034da29d839f104b0b2, type: 3}
@@ -4722,6 +4982,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1045779900}
     m_Modifications:
+    - target: {fileID: 976520536105353543, guid: 8735feae95deed146b3494a12a258f47,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422062640697036676, guid: 8735feae95deed146b3494a12a258f47,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2238234641630306405, guid: 8735feae95deed146b3494a12a258f47,
         type: 3}
       propertyPath: m_RootOrder
@@ -4792,10 +5062,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6437252424861986932, guid: 8735feae95deed146b3494a12a258f47,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7497924763072713744, guid: 8735feae95deed146b3494a12a258f47,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7505522225275239872, guid: 8735feae95deed146b3494a12a258f47,
         type: 3}
       propertyPath: m_Name
       value: W pagoda 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7505522225275239872, guid: 8735feae95deed146b3494a12a258f47,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 9109891323588596902, guid: 8735feae95deed146b3494a12a258f47,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8735feae95deed146b3494a12a258f47, type: 3}
