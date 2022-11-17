@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.AI;
+using Random = UnityEngine.Random;
 
 public class OniSamurai : MonoBehaviour
 {
@@ -12,7 +15,13 @@ public class OniSamurai : MonoBehaviour
     public float grado;
     public bool atacando;
 
+    public float speed;
+
     public GameObject target;
+
+    public NavMeshAgent agente;
+    public float distancia_ataque;
+    public float radio_vision;
 
     // Start is called before the first frame update
     void Start()
@@ -29,12 +38,13 @@ public class OniSamurai : MonoBehaviour
         Comportamiento_Enemigo();
     }
 
-    
+
 
     public void Comportamiento_Enemigo()
     {
-        if (Vector3.Distance(transform.position, target.transform.position) > 50)
+        if (Vector3.Distance(transform.position, target.transform.position) > radio_vision)
         {
+            agente.enabled = false;
             Ani.SetBool("Run", false);
             cronometro += 1 * Time.deltaTime;
             if (cronometro >= 4)
@@ -56,7 +66,7 @@ public class OniSamurai : MonoBehaviour
 
                 case 2:
                     transform.rotation = Quaternion.RotateTowards(transform.rotation, angulo, 0.5f);
-                    transform.Translate(Vector3.forward * 1 * Time.deltaTime);
+                    transform.Translate(Vector3.forward * speed * Time.deltaTime);
                     Ani.SetBool("Walk", true);
 
                     break;
@@ -68,36 +78,48 @@ public class OniSamurai : MonoBehaviour
         }
         else
         {
-            if (Vector3.Distance(transform.position, target.transform.position) > 1 && !atacando) 
-            
-            { 
-                var lookPos = target.transform.position - transform.position;
+
+
+
+            var lookPos = target.transform.position - transform.position;
             lookPos.y = 0;
             var rotation = Quaternion.LookRotation(lookPos);
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, 3);
-            Ani.SetBool("Walk", false);
+            agente.enabled = true;
+            agente.SetDestination(target.transform.position);
 
-            Ani.SetBool("Run", true);
-            transform.Translate(Vector3.forward * 4 * Time.deltaTime);
-
-                Ani.SetBool("Attack", false);
-                
-        }
-            else 
+            if (Vector3.Distance(transform.position, target.transform.position) > distancia_ataque && !atacando)
             {
-                Ani.SetBool("Walk", false);
-                Ani.SetBool("Run", false);
-
-                Ani.SetBool("Attack", true);
-                atacando = true;
+                Ani.SetBool("walk", false);
+                Ani.SetBool("Run", true);
             }
-      }
+
+            else
+            {
+                if (!atacando)
+                {
+                    transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, 1);
+                    Ani.SetBool("walk", false);
+                    Ani.SetBool("Run", false);
+                    Ani.SetBool("Attack", true);
+                }
+
+
+
+            }
+        }
+        if (atacando)
+        {
+            agente.enabled = false;
+        }
     }
 
-    public void Final_Ani() 
+    public void Final_Ani()
     {
-        Ani.SetBool("Attack", false);
-        atacando=false; 
+        if(Vector3.Distance(transform.position,target.transform.position)> distancia_ataque + 0.2f)
+        {
+            Ani.SetBool("Attack", false);
+        }
+        
     }
 }
 
