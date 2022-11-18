@@ -68,7 +68,7 @@ public class OniSamurai : MonoBehaviour
                     transform.rotation = Quaternion.RotateTowards(transform.rotation, angulo, 0.5f);
                     transform.Translate(Vector3.forward * speed * Time.deltaTime);
                     Ani.SetBool("Walk", true);
-
+                    Ani.SetBool("Attack", false);
                     break;
 
 
@@ -89,8 +89,9 @@ public class OniSamurai : MonoBehaviour
 
             if (Vector3.Distance(transform.position, target.transform.position) > distancia_ataque && !atacando)
             {
-                Ani.SetBool("walk", false);
+                Ani.SetBool("Walk", false);
                 Ani.SetBool("Run", true);
+                Ani.SetBool("Attack", false);
             }
 
             else
@@ -98,7 +99,7 @@ public class OniSamurai : MonoBehaviour
                 if (!atacando)
                 {
                     transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, 1);
-                    Ani.SetBool("walk", false);
+                    Ani.SetBool("Walk", false);
                     Ani.SetBool("Run", false);
                     Ani.SetBool("Attack", true);
                 }
@@ -110,6 +111,7 @@ public class OniSamurai : MonoBehaviour
         if (atacando)
         {
             agente.enabled = false;
+
         }
     }
 
