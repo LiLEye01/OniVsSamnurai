@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour
     private InputActionReference change;
     [SerializeField]
     private InputActionReference block;
+    [SerializeField]
+    private InputActionReference cure;
 
     private CharacterController controller;
 
@@ -65,6 +67,7 @@ public class PlayerController : MonoBehaviour
         hit.action.Enable();
         change.action.Enable();
         block.action.Enable();
+        cure.action.Enable();
     }
 
     private void OnDisable()
@@ -74,6 +77,7 @@ public class PlayerController : MonoBehaviour
         hit.action.Disable();
         change.action.Disable();
         block.action.Disable();
+        cure.action.Disable();
     }
 
     void Update()
@@ -131,6 +135,11 @@ public class PlayerController : MonoBehaviour
         else
         {
             anim.SetBool("Block", false);
+        }
+
+        if (cure.action.triggered)
+        {
+            //salud incrimenta
         }
            
         //Dash con corutina
