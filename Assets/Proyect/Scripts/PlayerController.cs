@@ -18,6 +18,8 @@ public class PlayerController : MonoBehaviour
     private InputActionReference block;
     [SerializeField]
     private InputActionReference cure;
+    [SerializeField]
+    private InputActionReference run;
 
     private CharacterController controller;
 
@@ -29,7 +31,7 @@ public class PlayerController : MonoBehaviour
     private Animator anim;
 
     [SerializeField]
-    private float playerSpeed = 2.0f;
+    private float playerSpeed = 10.0f;
     [SerializeField]
     private float jumpHeight = 1.0f;
     [SerializeField]
@@ -68,6 +70,7 @@ public class PlayerController : MonoBehaviour
         change.action.Enable();
         block.action.Enable();
         cure.action.Enable();
+        run.action.Enable();
     }
 
     private void OnDisable()
@@ -78,6 +81,7 @@ public class PlayerController : MonoBehaviour
         change.action.Disable();
         block.action.Disable();
         cure.action.Disable();
+        run.action.Disable();  
     }
 
     void Update()
@@ -140,6 +144,17 @@ public class PlayerController : MonoBehaviour
         if (cure.action.triggered)
         {
             //salud incrimenta
+        }
+
+        if (run.action.triggered)
+        {
+            anim.SetBool("Run", true);
+            playerSpeed = 15.0f;
+        }
+        else
+        {
+            anim.SetBool("Run", false);
+            playerSpeed = 10.0f;
         }
            
         //Dash con corutina

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - OniSamurai
+  - Katana
   layers:
   - Default
   - TransparentFX
