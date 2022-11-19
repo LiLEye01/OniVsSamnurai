@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
     private InputActionReference hit;
     [SerializeField]
     private InputActionReference change;
+    [SerializeField]
+    private InputActionReference block;
 
     private CharacterController controller;
 
@@ -62,6 +64,7 @@ public class PlayerController : MonoBehaviour
         dashControl.action.Enable();
         hit.action.Enable();
         change.action.Enable();
+        block.action.Enable();
     }
 
     private void OnDisable()
@@ -70,6 +73,7 @@ public class PlayerController : MonoBehaviour
         dashControl.action.Disable();
         hit.action.Disable();
         change.action.Disable();
+        block.action.Disable();
     }
 
     void Update()
@@ -118,6 +122,15 @@ public class PlayerController : MonoBehaviour
                 isReady=false;
                 katana.SetActive(false);
             }
+        }
+
+        if (block.action.triggered)
+        {
+            anim.SetBool("Block", true);
+        }
+        else
+        {
+            anim.SetBool("Block", false);
         }
            
         //Dash con corutina
