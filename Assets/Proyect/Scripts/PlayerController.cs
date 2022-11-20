@@ -112,6 +112,11 @@ public class PlayerController : MonoBehaviour
             if (isReady)
             {
                 anim.SetTrigger("Attack");
+                katana.gameObject.GetComponent<Collider>().enabled = true;
+            }
+            else
+            {
+                katana.gameObject.GetComponent<Collider>().enabled = false;
             }
         }
 
