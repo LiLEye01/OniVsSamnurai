@@ -151,12 +151,12 @@ public class PlayerController : MonoBehaviour
             //salud incrimenta
         }
 
-        if (run.action.triggered)
+        if (run.action.ReadValue<float>() > 0)
         {
             anim.SetBool("Run", true);
             playerSpeed = 15.0f;
         }
-        else
+        else if(run.action.ReadValue<float>() == 0)
         {
             anim.SetBool("Run", false);
             playerSpeed = 10.0f;
