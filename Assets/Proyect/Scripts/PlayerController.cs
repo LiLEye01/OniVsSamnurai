@@ -42,6 +42,8 @@ public class PlayerController : MonoBehaviour
     private float damage = 25f;
     [SerializeField]
     private GameObject katana;
+    [SerializeField]
+    private GameObject katana2;
 
     private Transform cameraMain;
 
@@ -93,18 +95,23 @@ public class PlayerController : MonoBehaviour
         }
 
         Vector2 movement = movementControl.action.ReadValue<Vector2>();
-        move = new Vector3( movement.x,0,movement.y );
+        move = new Vector3(movement.x, 0, movement.y);
         move = cameraMain.transform.forward * move.z + cameraMain.transform.right * move.x;
         move.y = 0f;
         controller.Move(move * Time.deltaTime * playerSpeed);
 
-        if (movement.x != 0 || movement.y != 0)
+        if (movement.x != 0 || movement.y != 0 && !isReady)
         {
             anim.SetBool("Walk", true);
+        }
+        else if (movement.x != 0 || movement.y != 0 && isReady)
+        {
+            anim.SetBool("WalkKatana", true);            
         }
         else
         {
             anim.SetBool("Walk", false);
+            anim.SetBool("WalkKatana", false);
         }
         
         if(hit.action.triggered)
@@ -112,11 +119,11 @@ public class PlayerController : MonoBehaviour
             if (isReady)
             {
                 anim.SetTrigger("Attack");
-                katana.gameObject.GetComponent<Collider>().enabled = true;
+                
             }
             else
             {
-                katana.gameObject.GetComponent<Collider>().enabled = false;
+                
             }
         }
 
@@ -127,6 +134,7 @@ public class PlayerController : MonoBehaviour
                 anim.SetTrigger("Ready");
                 isReady = true;
                 katana.SetActive(true);
+                katana2.SetActive(false);
                 
             }
             else
@@ -134,6 +142,7 @@ public class PlayerController : MonoBehaviour
                 anim.SetTrigger("endFight");
                 isReady=false;
                 katana.SetActive(false);
+                katana2.SetActive(true);
             }
         }
 
@@ -151,21 +160,31 @@ public class PlayerController : MonoBehaviour
             //salud incrimenta
         }
 
-        if (run.action.ReadValue<float>() > 0)
+        if (run.action.ReadValue<float>() > 0 && !isReady)
         {
             anim.SetBool("Run", true);
             playerSpeed = 15.0f;
         }
-        else if(run.action.ReadValue<float>() == 0)
-        {
+       else if(run.action.ReadValue<float>() > 0 && isReady)
+       {
+            anim.SetBool("SprintKatana", true);
+       }
+       else if (run.action.ReadValue<float>() == 0)
+       {
             anim.SetBool("Run", false);
+            anim.SetBool("SprintKatana", false);
             playerSpeed = 10.0f;
-        }
-           
+       }
+
         //Dash con corutina
         if (dashControl.action.triggered)
         {
             StartCoroutine(charDash());
+            anim.SetBool("Dash", true);
+        }
+        else
+        {
+            anim.SetBool("Dash", false);
         }
 
         playerVelocity.y += gravityValue * Time.deltaTime;
