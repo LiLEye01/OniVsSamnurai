@@ -106,24 +106,20 @@ public class PlayerController : MonoBehaviour
         }
         else if (movement.x != 0 || movement.y != 0 && isReady)
         {
-            anim.SetBool("WalkKatana", true);            
+            anim.SetBool("WalkKatana", true);
         }
         else
         {
             anim.SetBool("Walk", false);
             anim.SetBool("WalkKatana", false);
         }
-        
-        if(hit.action.triggered)
+
+        if (hit.action.triggered)
         {
             if (isReady)
             {
                 anim.SetTrigger("Attack");
-                
-            }
-            else
-            {
-                
+
             }
         }
 
@@ -135,12 +131,12 @@ public class PlayerController : MonoBehaviour
                 isReady = true;
                 katana.SetActive(true);
                 katana2.SetActive(false);
-                
+
             }
             else
             {
                 anim.SetTrigger("endFight");
-                isReady=false;
+                isReady = false;
                 katana.SetActive(false);
                 katana2.SetActive(true);
             }
@@ -165,16 +161,16 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("Run", true);
             playerSpeed = 15.0f;
         }
-       else if(run.action.ReadValue<float>() > 0 && isReady)
-       {
+        else if (run.action.ReadValue<float>() > 0 && isReady)
+        {
             anim.SetBool("SprintKatana", true);
-       }
-       else if (run.action.ReadValue<float>() == 0)
-       {
+        }
+        else if (run.action.ReadValue<float>() == 0)
+        {
             anim.SetBool("Run", false);
             anim.SetBool("SprintKatana", false);
             playerSpeed = 10.0f;
-       }
+        }
 
         //Dash con corutina
         if (dashControl.action.triggered)
