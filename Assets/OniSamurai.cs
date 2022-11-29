@@ -23,6 +23,14 @@ public class OniSamurai : MonoBehaviour
     public float distancia_ataque;
     public float radio_vision;
 
+    public states currentStates;
+    public enum states
+    {
+        Live1,
+        Live2,
+        Dead
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,8 +42,19 @@ public class OniSamurai : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        Comportamiento_Enemigo();
+        switch (currentStates)
+        {
+            case states.Live1:
+                Comportamiento_Enemigo();
+                break;
+            case states.Live2:
+                Debug.Log("Hola");
+                Comportamiento_Enemigo();
+                break;
+            case states.Dead:
+                Debug.Log("Muerto");
+                break;
+        }
     }
 
 

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class StateMachine : MonoBehaviour
 {
-    states currentStates;
-    enum states
+    public states currentStates;
+    public enum states
     {
         Live1,
         Live2,
