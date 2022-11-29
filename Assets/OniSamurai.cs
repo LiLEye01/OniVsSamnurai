@@ -28,7 +28,8 @@ public class OniSamurai : MonoBehaviour
     {
         Live1,
         Live2,
-        Dead
+        Dead,
+        Dead2
     }
 
     // Start is called before the first frame update
@@ -46,18 +47,44 @@ public class OniSamurai : MonoBehaviour
         {
             case states.Live1:
                 Comportamiento_Enemigo();
+                agente.speed = 10;
+               /* if (vida <= 0)
+                {
+                    ChangeState(states.Dead);
+                }*/
+                break;
+            case states.Dead:
+                Debug.Log("muerte1");
+                StartCoroutine(Change());
+                
                 break;
             case states.Live2:
                 Debug.Log("Hola");
+                distancia_ataque = 8;
+                agente.stoppingDistance = distancia_ataque;
+                agente.speed = 20;
                 Comportamiento_Enemigo();
+                /* if (vida <= 0)
+                {
+                    ChangeState(states.Dead);
+                }*/
                 break;
-            case states.Dead:
+            case states.Dead2:
                 Debug.Log("Muerto");
                 break;
         }
     }
 
+    void ChangeState(states nextState)
+    {
+        currentStates = nextState;
+    }
 
+    IEnumerator Change()
+    {
+        yield return new WaitForSeconds(3);
+        ChangeState(states.Live2);
+    }
 
     public void Comportamiento_Enemigo()
     {
@@ -141,6 +168,18 @@ public class OniSamurai : MonoBehaviour
             Ani.SetBool("Attack", false);
         }
         
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player") && other.gameObject.GetComponent<PlayerController>().isBlock == true)
+        {
+            Ani.SetTrigger("Block");
+        }
+        else if(other.CompareTag("Player") && other.gameObject.GetComponent<PlayerController>().isBlock == false)
+        {
+            //hace daño
+        }
     }
 }
 

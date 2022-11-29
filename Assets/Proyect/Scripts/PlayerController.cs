@@ -55,6 +55,7 @@ public class PlayerController : MonoBehaviour
     float dashTime, dashSpeed;
 
     bool isReady;
+    public bool isBlock;
 
     private void Start()
     {
@@ -142,13 +143,17 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (block.action.triggered)
+       float guard = block.action.ReadValue<float>();
+
+        if (guard > 0)
         {
             anim.SetBool("Block", true);
+            isBlock=true;
         }
-        else
+        else if(guard <= 0)
         {
             anim.SetBool("Block", false);
+            isBlock = false;
         }
 
         if (cure.action.triggered)

@@ -5286,6 +5286,11 @@ PrefabInstance:
       propertyPath: m_Radius
       value: 0.35
       objectReference: {fileID: 0}
+    - target: {fileID: 1259426060863133492, guid: b66deee8f1c211b4780be6697d9e7f48,
+        type: 3}
+      propertyPath: m_StoppingDistance
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1259426060863133496, guid: b66deee8f1c211b4780be6697d9e7f48,
         type: 3}
       propertyPath: m_Size.x
@@ -28506,6 +28511,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1494819554}
   m_Mesh: {fileID: -5285896895940743255, guid: 0574ad07ade04714397bb105df4c98bc, type: 3}
+--- !u!1 &1508165416 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1373179554344669461, guid: b66deee8f1c211b4780be6697d9e7f48,
+    type: 3}
+  m_PrefabInstance: {fileID: 120373318}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1508165424
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1508165416}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.9411505, y: 1.910795, z: 0.35980004}
+  m_Center: {x: 0.014298596, y: 0.96926135, z: -0.03299169}
 --- !u!4 &1533172399 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 283798182509547076, guid: 8f54d8016937acc4ab14c391df46a9ef,
