@@ -19,6 +19,8 @@ public class OniSamurai : MonoBehaviour
 
     public GameObject target;
 
+    DatosEnemigo _DatosEnemigo;
+
     public NavMeshAgent agente;
     public float distancia_ataque;
     public float radio_vision;
@@ -37,6 +39,7 @@ public class OniSamurai : MonoBehaviour
     {
         Ani = GetComponent<Animator>();
         target = GameObject.Find("Player");
+        _DatosEnemigo = GetComponent<DatosEnemigo>();
 
     }
 
@@ -47,28 +50,28 @@ public class OniSamurai : MonoBehaviour
         {
             case states.Live1:
                 Comportamiento_Enemigo();
-                agente.speed = 10;
-               /* if (vida <= 0)
+                if (_DatosEnemigo.VidaEnemigo <= 0)
                 {
                     ChangeState(states.Dead);
-                }*/
+                }
                 break;
+
             case states.Dead:
                 Debug.Log("muerte1");
                 StartCoroutine(Change());
-                
                 break;
+
             case states.Live2:
                 Debug.Log("Hola");
-                distancia_ataque = 8;
+                distancia_ataque = 4;
                 agente.stoppingDistance = distancia_ataque;
-                agente.speed = 20;
                 Comportamiento_Enemigo();
-                /* if (vida <= 0)
+                if (_DatosEnemigo.VidaEnemigo <= 0)
                 {
-                    ChangeState(states.Dead);
-                }*/
+                    ChangeState(states.Dead2);
+                }
                 break;
+
             case states.Dead2:
                 Debug.Log("Muerto");
                 break;
@@ -82,7 +85,8 @@ public class OniSamurai : MonoBehaviour
 
     IEnumerator Change()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(2);
+        _DatosEnemigo.VidaEnemigo = 100;
         ChangeState(states.Live2);
     }
 
@@ -114,6 +118,8 @@ public class OniSamurai : MonoBehaviour
                     transform.rotation = Quaternion.RotateTowards(transform.rotation, angulo, 0.5f);
                     transform.Translate(Vector3.forward * speed * Time.deltaTime);
                     Ani.SetBool("Walk", true);
+                    agente.speed = 3;
+                    speed = 3;
                     Ani.SetBool("Attack", false);
                     break;
 
@@ -136,6 +142,8 @@ public class OniSamurai : MonoBehaviour
             if (Vector3.Distance(transform.position, target.transform.position) > distancia_ataque && !atacando)
             {
                 Ani.SetBool("Walk", false);
+                agente.speed = 15;
+                speed = 15;
                 Ani.SetBool("Run", true);
                 Ani.SetBool("Attack", false);
             }
