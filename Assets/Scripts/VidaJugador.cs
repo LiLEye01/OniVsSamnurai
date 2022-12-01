@@ -4,15 +4,46 @@ using UnityEngine;
 
 public class VidaJugador : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private ParticleSystem particulas;
+    public float vidaJugador = 100;
+
+
+    private void Start()
     {
-        
+        particulas = GetComponent<ParticleSystem>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void CambiarVidaMaxima(float vidaMaxima)
     {
-        
+        particulas.startLifetime = vidaMaxima;
+    }
+
+    private void Update()
+    {
+        vidaJugador = Mathf.Clamp(vidaJugador, 0, 100);
+
+        if (vidaJugador >= 100)
+        {
+            CambiarVidaMaxima(0.2f);
+        }
+        else if (vidaJugador < 26)
+        {
+            CambiarVidaMaxima(1.7f);
+        }
+        else if (vidaJugador < 51)
+        {
+            CambiarVidaMaxima(0.85f);
+        }
+        else if (vidaJugador < 76)
+        {
+            CambiarVidaMaxima(0.425f);
+        }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            vidaJugador -= 25;
+        }
     }
 }
