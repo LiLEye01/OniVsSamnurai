@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DatosEnemigo : MonoBehaviour
 {
-    public int VidaEnemigo = 500;
+    public int VidaEnemigo = 100;
 
     private void Update() 
     

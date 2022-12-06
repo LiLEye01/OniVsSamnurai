@@ -190,7 +190,7 @@ public class PlayerController : MonoBehaviour
             if(vidaJugador < 100 && cures > 0)
             {
                 cures--;
-                vidaJugador -= 35;
+                vidaJugador += 35;
             }
             else if(vidaJugador >= 100 && cures > 0)
             {

@@ -16,6 +16,9 @@ public class OniSamurai : MonoBehaviour
     public bool atacando;
 
     public float speed;
+    float ran;
+
+    bool cambio;
 
     public GameObject target;
 
@@ -43,6 +46,7 @@ public class OniSamurai : MonoBehaviour
         Ani = GetComponent<Animator>();
         target = GameObject.Find("Player");
         _DatosEnemigo = GetComponent<DatosEnemigo>();
+        StartCoroutine(CambioAtaque());
 
     }
 
@@ -76,7 +80,7 @@ public class OniSamurai : MonoBehaviour
                 break;
 
             case states.Dead2:
-                Debug.Log("Muerto");
+                Ani.SetTrigger("Muerte");
                 break;
         }
     }
@@ -158,7 +162,24 @@ public class OniSamurai : MonoBehaviour
                     transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, 1);
                     Ani.SetBool("Walk", false);
                     Ani.SetBool("Run", false);
-                    Ani.SetBool("Attack", true);
+                    //aveces bool atack bool block con un rando
+                    if (cambio)
+                    {
+                        ran = Random.Range(0, 10);
+                        cambio = false;
+                    }
+
+                    if ( ran > 5)
+                    {
+                        Ani.SetBool("Attack", true);
+                        Ani.SetBool("Guard", false);
+                    }
+                    else
+                    {
+                        Ani.SetBool("Guard", true);
+                        Ani.SetBool("Attack", false);
+                    }
+                    
                 }
 
 
@@ -191,6 +212,16 @@ public class OniSamurai : MonoBehaviour
         {
             StartCoroutine(Daño());
         }
+    }
+
+    IEnumerator CambioAtaque()
+    {
+        while (true) 
+        {
+            yield return new WaitForSeconds(2);
+            cambio = true;
+        }
+        
     }
 
     IEnumerator Daño()

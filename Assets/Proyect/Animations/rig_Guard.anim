@@ -6055,15 +6055,6 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.95
-        value: 0
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
         time: 0.98333335
         value: 0
         inSlope: Infinity
@@ -6076,7 +6067,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Enabled
-    path: root/pelvis/spine_01/spine_02/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r/thumb_02_r/Bloqueo
+    path: root/pelvis/spine_01/spine_02/spine_03/clavicle_r/upperarm_r/lowerarm_r/hand_r/weapon_r
     classID: 65
     script: {fileID: 0}
   m_PPtrCurves: []
@@ -6508,7 +6499,7 @@ AnimationClip:
       customType: 8
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 3713513496
+      path: 305838830
       attribute: 3305885265
       script: {fileID: 0}
       typeID: 65
@@ -13064,15 +13055,6 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.95
-        value: 0
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
         time: 0.98333335
         value: 0
         inSlope: Infinity
@@ -13085,7 +13067,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Enabled
-    path: root/pelvis/spine_01/spine_02/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r/thumb_02_r/Bloqueo
+    path: root/pelvis/spine_01/spine_02/spine_03/clavicle_r/upperarm_r/lowerarm_r/hand_r/weapon_r
     classID: 65
     script: {fileID: 0}
   m_EulerEditorCurves: []
