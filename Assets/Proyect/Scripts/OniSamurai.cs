@@ -25,7 +25,10 @@ public class OniSamurai : MonoBehaviour
     public float distancia_ataque;
     public float radio_vision;
 
+    public PlayerController _playerController;
+
     public states currentStates;
+
     public enum states
     {
         Live1,
@@ -186,8 +189,14 @@ public class OniSamurai : MonoBehaviour
         }
         else if(other.CompareTag("Player") && other.gameObject.GetComponent<PlayerController>().isBlock == false)
         {
-            //hace daño
+            StartCoroutine(Daño());
         }
+    }
+
+    IEnumerator Daño()
+    {
+        yield return new WaitForSeconds(1);
+        _playerController.vidaJugador -= 25;
     }
 }
 

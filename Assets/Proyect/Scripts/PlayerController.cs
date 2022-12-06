@@ -44,6 +44,8 @@ public class PlayerController : MonoBehaviour
     private GameObject katana;
     [SerializeField]
     private GameObject katana2;
+    [SerializeField]
+    private float cures = 5;
 
     private Transform cameraMain;
 
@@ -56,6 +58,9 @@ public class PlayerController : MonoBehaviour
 
     bool isReady;
     public bool isBlock;
+
+    public ParticleSystem particulas;
+    public float vidaJugador = 100;
 
     private void Start()
     {
@@ -87,8 +92,32 @@ public class PlayerController : MonoBehaviour
         run.action.Disable();  
     }
 
+    public void CambiarVidaMaxima(float vidaMaxima)
+    {
+        particulas.startLifetime = vidaMaxima;
+    }
+
     void Update()
     {
+        vidaJugador = Mathf.Clamp(vidaJugador, 0, 100);
+
+        if (vidaJugador >= 100)
+        {
+            CambiarVidaMaxima(0.2f);
+        }
+        else if (vidaJugador < 26)
+        {
+            CambiarVidaMaxima(1.7f);
+        }
+        else if (vidaJugador < 51)
+        {
+            CambiarVidaMaxima(0.85f);
+        }
+        else if (vidaJugador < 76)
+        {
+            CambiarVidaMaxima(0.425f);
+        }
+
         groundedPlayer = controller.isGrounded;
         if (groundedPlayer && playerVelocity.y < 0)
         {
@@ -158,7 +187,15 @@ public class PlayerController : MonoBehaviour
 
         if (cure.action.triggered)
         {
-            //salud incrimenta
+            if(vidaJugador < 100 && cures > 0)
+            {
+                cures--;
+                vidaJugador -= 35;
+            }
+            else if(vidaJugador >= 100 && cures > 0)
+            {
+                cures--;
+            }
         }
 
         if (run.action.ReadValue<float>() > 0 && !isReady)
