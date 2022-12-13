@@ -64,7 +64,7 @@ public class OniSamurai : MonoBehaviour
         switch (currentStates)
         {
             case states.Live1:
-                distancia_ataque = 4;
+                distancia_ataque = 8;
                 agente.stoppingDistance = 8;
 
                 Comportamiento_Enemigo();
@@ -81,7 +81,7 @@ public class OniSamurai : MonoBehaviour
 
             case states.Live2:
                 Debug.Log("Hola");
-                distancia_ataque = 4;
+                distancia_ataque = 8;
                 agente.stoppingDistance = 8;
                 Comportamiento_Enemigo();
                 if (_DatosEnemigo.VidaEnemigo <= 0)
