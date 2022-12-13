@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private bool groundedPlayer;
 
-    private Animator anim;
+    public Animator anim;
 
     [SerializeField]
     private float playerSpeed = 10.0f;

@@ -39,7 +39,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.155
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18720202, g: 0.15545432, b: 0.17662083, a: 0.155}
+  m_IndirectSpecularColor: {r: 0.18730228, g: 0.15529446, b: 0.1765724, a: 0.155}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -37505,10 +37505,11 @@ MonoBehaviour:
   grado: 0
   atacando: 0
   speed: 0
+  ran: 0
   target: {fileID: 909807259}
   agente: {fileID: 1543879779}
-  distancia_ataque: 0
-  radio_vision: 0
+  distancia_ataque: 4
+  radio_vision: 4
   _playerController: {fileID: 2124839646}
   currentStates: 0
 --- !u!95 &1543879783 stripped

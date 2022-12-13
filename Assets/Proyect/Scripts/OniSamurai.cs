@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Rendering.HighDefinition;
 using Random = UnityEngine.Random;
 
 public class OniSamurai : MonoBehaviour
@@ -16,9 +17,10 @@ public class OniSamurai : MonoBehaviour
     public bool atacando;
 
     public float speed;
-    float ran;
+    public float ran;
 
     bool cambio;
+    public bool isBlockOni;
 
     public GameObject target;
 
@@ -53,9 +55,18 @@ public class OniSamurai : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (cambio)
+        {
+            ran = Random.Range(0, 10);
+            cambio = false;
+        }
+
         switch (currentStates)
         {
             case states.Live1:
+                distancia_ataque = 4;
+                agente.stoppingDistance = 8;
+
                 Comportamiento_Enemigo();
                 if (_DatosEnemigo.VidaEnemigo <= 0)
                 {
@@ -71,7 +82,7 @@ public class OniSamurai : MonoBehaviour
             case states.Live2:
                 Debug.Log("Hola");
                 distancia_ataque = 4;
-                agente.stoppingDistance = distancia_ataque;
+                agente.stoppingDistance = 8;
                 Comportamiento_Enemigo();
                 if (_DatosEnemigo.VidaEnemigo <= 0)
                 {
@@ -160,26 +171,51 @@ public class OniSamurai : MonoBehaviour
                 if (!atacando)
                 {
                     transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, 1);
-                    Ani.SetBool("Walk", false);
-                    Ani.SetBool("Run", false);
-                    //aveces bool atack bool block con un rando
-                    if (cambio)
-                    {
-                        ran = Random.Range(0, 10);
-                        cambio = false;
-                    }
 
-                    if ( ran > 5)
+                    //aveces bool atack bool block con un rando
+
+
+                    if (ran > 0 && ran < 2.5f)
                     {
+                        isBlockOni = false;
                         Ani.SetBool("Attack", true);
+                        Ani.SetBool("Attack2", false);
+                        Ani.SetBool("Attack3", false);
                         Ani.SetBool("Guard", false);
+                        Ani.SetBool("Walk", false);
+                        Ani.SetBool("Run", false);
+                    }
+                    else if (ran >= 2.5 && ran < 5)
+                    {
+                        isBlockOni = false;
+                        Ani.SetBool("Attack2", true);
+                        Ani.SetBool("Attack3", false);
+                        Ani.SetBool("Attack", false);
+                        Ani.SetBool("Guard", false);
+                        Ani.SetBool("Walk", false);
+                        Ani.SetBool("Run", false);
+                    }
+                    else if (ran >= 5 && ran < 7.5f)
+                    {
+                        isBlockOni = false;
+                        Ani.SetBool("Attack3", true);
+                        Ani.SetBool("Attack", false);
+                        Ani.SetBool("Attack2", false);
+                        Ani.SetBool("Guard", false);
+                        Ani.SetBool("Walk", false);
+                        Ani.SetBool("Run", false);
                     }
                     else
                     {
+                        isBlockOni = true;
                         Ani.SetBool("Guard", true);
                         Ani.SetBool("Attack", false);
+                        Ani.SetBool("Attack2", false);
+                        Ani.SetBool("Attack3", false);
+                        Ani.SetBool("Walk", false);
+                        Ani.SetBool("Run", false);
                     }
-                    
+
                 }
 
 
@@ -195,11 +231,11 @@ public class OniSamurai : MonoBehaviour
 
     public void Final_Ani()
     {
-        if(Vector3.Distance(transform.position,target.transform.position)> distancia_ataque + 0.2f)
+        if (Vector3.Distance(transform.position, target.transform.position) > distancia_ataque + 0.2f)
         {
             Ani.SetBool("Attack", false);
         }
-        
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -208,24 +244,29 @@ public class OniSamurai : MonoBehaviour
         {
             Ani.SetTrigger("Block");
         }
-        else if(other.CompareTag("Player") && other.gameObject.GetComponent<PlayerController>().isBlock == false)
+        else if (other.CompareTag("Player") && other.gameObject.GetComponent<PlayerController>().isBlock == false)
         {
-            StartCoroutine(Daño());
+            if(isBlockOni == false)
+            {
+                StartCoroutine(Daño());
+            }
+            
         }
     }
 
     IEnumerator CambioAtaque()
     {
-        while (true) 
+        while (true)
         {
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(5);
             cambio = true;
         }
-        
+
     }
 
     IEnumerator Daño()
     {
+        _playerController.anim.SetTrigger("Hit");
         yield return new WaitForSeconds(1);
         _playerController.vidaJugador -= 25;
     }
